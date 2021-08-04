@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even column Flexbox</title>
+    <style>
+        /*This is good only when all the contents have to be fit into one column*/
+        
+        *{
+            margin:0;
+            padding: 0;
+            /*Make box-sizing zero*/
+            box-sizing: border-box;
+        }
+        body{
+            text-align:center;
+        }
+        .col{
+            padding:5px;
+            background-color: azure;
+            border: 1px dotted cyan;
+        }
+        .even-columns{
+            display:flex;
+            flex-flow:row nowrap;
+        }
+        .even-columns > *{
+            flex-basis:100%;        
+        }
+    </style>
+</head>
+<body>
+    <div class="content flow">
+        <h1 class="title">Even columns</h1>
+        <div class="even-columns">
+            <div class="col">Lorem ipsum dolor sit amet consectetur adipisicing elit. At, laborum?</div>
+            <div class="col">Lorem ipsum dolor sit amet consectetur adipisicing elit. At, laborum?</div>
+            <div class="col">Lorem ipsum dolor sit amet consectetur adipisicing elit. At, laborum?</div>
+            <div class="col">Lorem ipsum dolor sit amet consectetur adipisicing elit. At, laborum?</div>
+            <div class="col">Lorem ipsum dolor sit amet consectetur adipisicing elit. At, laborum?</div>
+            <div class="col">Lorem ipsum dolor sit amet consectetur adipisicing elit. At, laborum?</div>
+        </div>
+    </div>
+</body>
+</html>

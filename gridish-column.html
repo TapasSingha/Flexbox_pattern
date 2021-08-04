@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gridish column Flexbox</title>
+    <style>
+        /*Gridish column layout is good if the contents are to be fixed at one size or one have fixed amount of columns (but it is not even) by allowing grow, shrink, and wrap. Then assign flex-basis a particular length value. This all is possible through flex-wrap and flex shorthand.*/
+        *{
+            margin:0;
+            padding: 0;
+            /*Make box-sizing zero*/
+            box-sizing: border-box;
+        }
+        body{
+            text-align:center;
+        }
+        .col{
+            padding:5px;
+            background-color:burlywood;
+            border: 1px dotted white;
+        }
+        .gridish-columns{
+            display:flex;
+            flex-wrap:wrap;
+        }
+        .gridish-columns > *{
+            flex:1 1 20%;
+        }
+    </style>
+</head>
+<body>
+    <div class="content flow">
+        <h1 class="title">Gridish columns</h1>
+        <div class="gridish-columns">
+            <div class="col">Lorem ipsum dolor sit amet consectetur adipisicing elit. At, laborum?</div>
+            <div class="col">Lorem ipsum dolor sit amet consectetur adipisicing elit. At, laborum?</div>
+            <div class="col">Lorem ipsum dolor sit amet consectetur adipisicing elit. At, laborum?</div>
+            <div class="col">Lorem ipsum dolor sit amet consectetur adipisicing elit. At, laborum?</div>
+            <div class="col">Lorem ipsum dolor sit amet consectetur adipisicing elit. At, laborum?</div>
+            <div class="col">Lorem ipsum dolor sit amet consectetur adipisicing elit. At, laborum?</div>
+        </div>
+    </div>
+</body>
+</html>
